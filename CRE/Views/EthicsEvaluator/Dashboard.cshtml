@@ -1,0 +1,63 @@
+﻿@model CRE.Models.EthicsEvaluator
+
+@{
+    ViewData["Title"] = "Center for Research Ethics";
+    Layout = "~/Views/Shared/_Layout ENav.cshtml";
+}
+
+<section class="welcome">
+    <h1>Welcome Back</h1>
+    <h2>@Model?.Faculty?.facultyId</h2>
+    <p>EVALUATOR</p>
+    <p>UNIVERSITY RESEARCH ETHICS BOARD</p>
+</section>
+
+<section class="evaluation-overview">
+    <h3>EVALUATION OVERVIEW</h3>
+    <div class="evaluation-stats">
+        <div class="stat-box">
+            <span class="number">@Model.completedEval</span>
+            <span class="label">TOTAL Evaluation Assignment</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">@Model.pendingEval</span>
+            <span class="label">To be Evaluated</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">@Model.declinedAssignment</span>
+            <span class="label">Evaluated Applications</span>
+        </div>
+    </div>
+</section>
+
+<section class="calendar">
+    <h3>CALENDAR</h3>
+    <table id="calendarTable">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Calendar rows will be dynamically populated using JavaScript -->
+        </tbody>
+    </table>
+</section>
+
+<section class="inbox">
+    <h3>Inbox</h3>
+    <ul id="notificationList">
+        <!-- Notifications will be dynamically populated using JavaScript -->
+    </ul>
+    <button id="clearInbox">Clear Inbox</button>
+</section>
+
+@section Scripts {
+ 
+}
